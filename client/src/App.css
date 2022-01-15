@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.controllers {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit {
+  width: 4vh;
+  height: 2vh;
+}
+
+.chat {
+  color: black;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}

@@ -1,0 +1,60 @@
+const socket = io("http://localhost:4000", {
+  transports: ["websocket", "polling"],
+});
+
+  
+  
+  
+  const [info, setInfo] = useState({});
+  const [messages, setMessages] = useState([]);
+  useEffect(() => {
+    socket.on("message", (data) => {
+      setMessages([...messages, data]);
+      console.log(messages);
+    });
+  });
+
+
+<div className="container">
+        <div className="chat">
+          {messages.map((message, index) => {
+            return (
+              <div className="messageDiv" key={index}>
+                <p>
+                  <strong>{message.name}</strong>: {message.message}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="controllers">
+          <input
+            onChange={(e) => {
+              const newInfo = info;
+              newInfo.name = e.target.value;
+              setInfo(newInfo);
+            }}
+            type="text"
+            className="name"
+            placeholder="name"
+          />
+          <input
+            onChange={(e) => {
+              const newInfo = info;
+              newInfo.message = e.target.value;
+              setInfo(newInfo);
+            }}
+            type="text"
+            className="message"
+            placeholder="message"
+          />
+          <button
+            onClick={() => {
+              socket.emit("message", info);
+            }}
+            className="submit"
+          >
+            Send
+          </button>
+        </div>
+      </div>

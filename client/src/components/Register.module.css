@@ -1,0 +1,72 @@
+.Register {
+  background-image: url(../images/discordlogin.png);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+.registerform {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  background-color: #343c3c;
+  width: 550px;
+  height: 600px;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 18px -2px #000000;
+  box-shadow: 0px 2px 18px -2px #000000;
+}
+
+.email,
+.password {
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.email > label,
+.password > label {
+  width: 80%;
+}
+
+.email > input,
+.password > input {
+  width: 80%;
+}
+
+.submitinfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.submitbottom {
+  align-self: center;
+  padding: 13px 35.5%;
+  background-color: #6064f4;
+  margin-bottom: 0;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.register {
+  margin-left: 10%;
+}
+.registerPolicy {
+  font-size: 0.89rem;
+}
