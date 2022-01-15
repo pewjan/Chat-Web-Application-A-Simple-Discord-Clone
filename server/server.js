@@ -7,7 +7,7 @@ const { client } = require("websocket");
 const logins = require("./models/login");
 const chatSchemaFunc = require("./models/chatlog");
 const mongoDB =
-  "mongodb+srv://babyrin:babyrin@cluster0.wtixx.mongodb.net/discord-clone?retryWrites=true&w=majority";
+  "";
 const io = require("socket.io")(server, {
   transports: ["websocket", "polling"],
 });
