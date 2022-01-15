@@ -15,7 +15,7 @@ $ npm run build
 $ npm run start
 ```
 
-#Features
+# Features
 
 > Real Time Messaging
 > 2 different rooms to chat
